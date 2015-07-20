@@ -2,3 +2,10 @@
     <%= gravatar_for @user %>
     <%= @user.name %>
 </h1>
+<div class="container">
+    <p>名前： <%= @user.name %></p>
+    <p>メールアドレス： <%= @user. email %></p>
+    <p>プロフィール： <%= @user.profile %></p>
+    <p>年齢： <%= @user.age %></p>
+    <p><%= link_to "ユーザー情報を編集する" , edit_user_path(@user) %></p>
+</div>
