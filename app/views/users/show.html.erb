@@ -8,4 +8,11 @@
     <p>プロフィール： <%= @user.profile %></p>
     <p>年齢： <%= @user.age %></p>
     <p><%= link_to "ユーザー情報を編集する" , edit_user_path(@user) %></p>
+</div> 
+<div class="container">
+    <% if notice %>
+       <div class="alert alert-info">
+           <%= notice %>
+       </div>
+    <% end %>
 </div>
