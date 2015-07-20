@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   #プロフィール修正実行アクション 
   def update
     if @user.update(user_params)
-      redirect_to root_path , notics: 'プロフィールを編集しました '
+      redirect_to current_user , notice: 'プロフィールを編集しました '
     else
       render 'edit'
     end
