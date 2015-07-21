@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   end
   
   def show
+    @user = User.find(params[:id])
+    @microposts = @user.microposts
   end
   
   #プロフィール修正画面の表示アクション 
